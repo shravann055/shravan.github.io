@@ -1,0 +1,17 @@
+p{
+    background-color: rgb(8, 129, 103);
+    color: blue;
+}
+h2{
+    background-color: rgb(235, 48, 241);
+    color: rgb(119, 4, 4);
+}
+body{
+    background-image: url(zcoerindori4.webp);background-repeat: no-repeat;background-size: cover;
+}
+p,h1,h2{
+    font-size: 20px;
+}
+#section{
+    font-size: 30px;
+}
