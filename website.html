@@ -1,183 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yash Foods</title>
-<style>
-/* Reset */
-* {margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif;}
-body {background-color:#f9f9f9; color:#333;}
-
-/* Header */
-header {
-  background-color:#ff6f61; 
-  color:white; 
-  padding:15px 30px; 
-  display:flex; 
-  justify-content:space-between; 
-  align-items:center;
-}
-header h1 {cursor:pointer;}
-nav a {
-  color:white; 
-  text-decoration:none; 
-  margin:0 15px; 
-  font-weight:bold; 
-  transition:0.3s;
-}
-nav a:hover {color:#ffd700;}
-
-/* Hero section */
-.hero {
-  position:relative;
-  height: 450px; 
-  overflow:hidden;
-}
-.hero img {
-  width:100%;
-  height:450px;
-  object-fit:cover;
-  display:block;
-  animation: slide 12s infinite;
-}
-@keyframes slide {
-  0% {transform: translateX(0);}
-  25% {transform: translateX(-100%);}
-  50% {transform: translateX(-200%);}
-  75% {transform: translateX(-300%);}
-  100% {transform: translateX(0);}
-}
-.hero-content {
-  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-  text-align:center; color:white;
-}
-.hero-content h2 {font-size:48px; text-shadow:2px 2px 5px rgba(0,0,0,0.5);}
-.hero-content p {font-size:20px; margin:15px 0; text-shadow:1px 1px 3px rgba(0,0,0,0.5);}
-.hero-content a {
-  display:inline-block; padding:12px 25px; background:#ffd700; color:#333; text-decoration:none; font-weight:bold; border-radius:5px;
-  transition:0.3s;
-}
-.hero-content a:hover {background:#ff6f61; color:white;}
-
-/* Sections */
-.container {width:90%; max-width:1200px; margin:40px auto;}
-h2.section-title {text-align:center; margin-bottom:30px; font-size:32px; color:#ff6f61;}
-
-/* Grid cards */
-.grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;}
-.card {background:white; border-radius:10px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.1); transition:transform 0.3s; position:relative;}
-.card:hover {transform:scale(1.05);}
-.card img {width:100%; height:150px; object-fit:cover;}
-.card h3 {margin:10px; font-size:20px;}
-.card p {margin:10px; font-size:14px; color:#555;}
-.card button {
-  position:absolute; bottom:10px; right:10px; background:#ff6f61; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; transition:0.3s;
-}
-.card button:hover {background:#ffd700; color:#333;}
-
-/* Footer */
-footer {background:#333; color:white; padding:20px; text-align:center; margin-top:40px;}
-footer a {color:white; margin:0 10px; text-decoration:none; transition:0.3s;}
-footer a:hover {color:#ffd700;}
-
-/* Responsive */
-@media(max-width:768px){
-  .hero-content h2{font-size:32px;}
-  .hero-content p{font-size:16px;}
-  header {flex-direction:column;}
-  nav {margin-top:10px;}
-}
-</style>
-</head>
-<body>
-
-<!-- Header -->
-<header>
-  <h1>Yash Foods</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Menu</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
-
-<!-- Hero / Slider -->
-<section class="hero">
-  <div class="hero-content">
-    <h2>Delicious Food Delivered Fast</h2>
-    <p>Order your favorite meals from local restaurants</p>
-    <a href="#">Order Now</a>
-  </div>
-  <img src="images/banner.jpg" alt="Banner Image">
-</section>
-
-<!-- Featured Restaurants -->
-<section class="container">
-  <h2 class="section-title">Featured Restaurants</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="images/restaurant1.jpg" alt="Restaurant 1">
-      <h3>Spice Villa</h3>
-      <p>Indian, Chinese</p>
-      <button>Order</button>
-    </div>
-    <div class="card">
-      <img src="images/restaurant2.jpg" alt="Restaurant 2">
-      <h3>Pizza Planet</h3>
-      <p>Italian, Fast Food</p>
-      <button>Order</button>
-    </div>
-    <div class="card">
-      <img src="images/restaurant3.jpg" alt="Restaurant 3">
-      <h3>Burger House</h3>
-      <p>Burgers, Fast Food</p>
-      <button>Order</button>
-    </div>
-  </div>
-</section>
-
-<!-- Popular Dishes -->
-<section class="container">
-  <h2 class="section-title">Popular Dishes</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="images/pizza.jpg" alt="Pizza">
-      <h3>Cheese Pizza</h3>
-      <p>$10</p>
-      <button>Order</button>
-    </div>
-    <div class="card">
-      <img src="images/burger.jpg" alt="Burger">
-      <h3>Classic Burger</h3>
-      <p>$8</p>
-      <button>Order</button>
-    </div>
-    <div class="card">
-      <img src="images/pasta.jpg" alt="Pasta">
-      <h3>Italian Pasta</h3>
-      <p>$12</p>
-      <button>Order</button>
-    </div>
-    <div class="card">
-      <img src="images/salad.jpg" alt="Salad">
-      <h3>Fresh Salad</h3>
-      <p>$6</p>
-      <button>Order</button>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>&copy; 2025 Yash Foods. All rights reserved.</p>
-  <p>
-    <a href="#">Facebook</a> |
-    <a href="#">Instagram</a> |
-    <a href="#">Twitter</a>
-  </p>
-</footer>
-
-</body>
+<html>
+    <head>
+        <title>practical13</title>
+        <style>
+            #td1439{
+                font-style: italic;
+            }
+            h1{
+                color: rgb(6, 255, 255);
+                background-color: rgb(0, 17, 255);
+            }
+        </style>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body >
+        <section style="background-color: rgb(75, 194, 38);">
+            
+                Several attributes and elements can enhance dropdown lists.<br>
+                The selected attribute makes an option the default choice,<br>
+                 while disabled can disable the entire dropdown or individual options. <br>
+                 The multiple attribute allows selecting multiple options,<br>
+                  and required mandates selection before form submission. <br>
+                  The optgroup element groups related options under a label.<br>
+                  For more complex dropdowns, CSS, JavaScript,<br>
+                  or frameworks like Bootstrap are often used.<br>
+                  A basic example of a dropdown list and grouping options can be found on Mimo. 
+            
+        </section>
+        <h1>
+            This is made using internal css
+        </h1>
+        <h2>
+            This is made using External CSS
+        </h2>
+                <p>Several attributes and elements can enhance dropdown lists.<br>
+                The selected attribute makes an option the default choice,<br>
+                 while disabled can disable the entire dropdown or individual options. <br>
+                 The multiple attribute allows selecting multiple options,<br>
+                  and required mandates selection before form submission. <br>
+                  The optgroup element groups related options under a label.<br>
+                  For more complex dropdowns, CSS, JavaScript,<br>
+                  or frameworks like Bootstrap are often used.<br>
+                  A basic example of a dropdown list and grouping options can be found on Mimo. 
+                </p>
+                <section style="background-color: rgb(51, 255, 61);">
+                <pre id="td1439">
+                    Web application development is the process of creating interactive programs that run on web 
+                    servers and are accessed through web browsers over the internet. This process involves designing, 
+                    building, testing, and deploying web-based systems that enable users to interact with data and
+                     perform tasks online. 
+                </section>
+                </pre>
+    </body>
 </html>
